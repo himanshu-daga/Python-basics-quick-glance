@@ -2,12 +2,13 @@
 This repo contains very basic syntax on python for revision for a new learner. Content has been taken from Python for beginners course on coursera.
 
 ## Lists
+'''python
 list=[], l=list() -- creates a list
 list[3] -- used to access elements of a list (Note- indexing starts from index 0)
 list[1:4], list[2:], list[:8] -- different slicings of a list to get a sublist (Note- [a:b] means a to b, not including b)
 list.split()-- splits the lists into different parts about every space i.e. gives a list of words
 list.split('@')-- splits the lists into different parts about the symbol in single quotes
-
+'''
 
 ## Dictionaries
 dict={}, d=dict() -- creates a dictionary: collection of key-value pairs 
