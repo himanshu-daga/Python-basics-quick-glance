@@ -61,3 +61,12 @@ lst=sorted( lst, reverse=True )
 for v,k in lst[:10]
     print(k,v)
 ```
+
+## List comprehension
+With this we can write last 8 lines of above code in 1 line
+In list comprehension, we define a list not by actual elements but by an expression.
+For example: ```python a=[(v,k) for (k,v) in d.items()] ```
+So we can write last 8 lines of above code as:
+```python
+print(sorted( [ (v,k) for k,v in counts.items() ], reverse= True ) )
+```
