@@ -1,6 +1,10 @@
 # Python-basics-quick-glance
 This repo contains very basic syntax on python for revision for a new learner. Content has been taken from Python for beginners course on coursera.
 
+--  Use Dir on any object to check all methods that can be done on it. Ex:
+    l=list()
+    dir(l)
+
 ## Lists
 ```python
 list=[], l=list() # creates a list
@@ -25,4 +29,13 @@ If present then returns it's value else initialises that key with a default valu
 Ex-
 for name in names:
   counts[name]=counts.get(name,0) + 1;
+```
+## Tuples -- Immutable lists
+These are more efficient than lists bcoz they can be stored more densely as they are immutable.
+```python 
+tp=( , , , ..)  tp=tuple() #create a tuple
+(x,y)=(2,'Ram')
+for (k,v) in d.items() # d is dictionary and d.items gives tuples in key value pairs
+    print(k,v)
+    
 ```
