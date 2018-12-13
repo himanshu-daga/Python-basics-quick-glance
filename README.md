@@ -11,8 +11,8 @@ list=[], l=list() # creates a list
 list[3] # used to access elements of a list (Note- indexing starts from index 0)
 list[1:4], list[2:], list[:8] # different slicings of a list to get a sublist 
     (Note- [a:b] means a to b, not including b)
-list.split() # splits the lists into different parts about every space i.e. gives a list of words
-list.split('@') # splits the lists into different parts about the symbol in single quotes
+list.split() # splits a line into different parts about every space i.e. gives a list of words
+list.split('@') # splits the list into different parts about the symbol in single quotes
 ```
 
 ## Dictionaries
@@ -30,12 +30,34 @@ Ex-
 for name in names:
   counts[name]=counts.get(name,0) + 1;
 ```
-## Tuples -- Immutable lists
+## Tuples -- Immutable lists Ch-10
 These are more efficient than lists bcoz they can be stored more densely as they are immutable.
 ```python 
 tp=( , , , ..)  tp=tuple() #create a tuple
 (x,y)=(2,'Ram')
 for (k,v) in d.items() # d is dictionary and d.items gives tuples in key value pairs
     print(k,v)
-    
+sorted(d.items(), reverse=True)    
+```
+Comparing 2 tuples is possible
+
+Simple code using above 3 data structures
+Q. Find top 10 most common words in a given file.
+Code:
+```python 
+fname="file.txt"
+fhand= open(fname)
+for line in fhand:
+    words=line.split()
+    for word in words:
+        counts[word]= counts.get(word,0) + 1
+
+lst=list()
+for k,v in counts.items()
+    newtup= (v,k)
+    lst.append(v,k)
+
+lst=sorted( lst, reverse=True )
+for v,k in lst[:10]
+    print(k,v)
 ```
