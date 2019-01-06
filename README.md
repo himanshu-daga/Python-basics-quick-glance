@@ -74,6 +74,7 @@ print(sorted( [ (v,k) for k,v in counts.items() ], reverse= True ) )
 Very handy for making searches in strings and documents with specific type of pattern like we want to search all words starting with 'H' and ending with 'o' rather than finding whether 'Hello' is present or not. For this, we use wildcard characters.
 
 Python Regular Expression Quick Guide:
+```python
 ^        Matches the beginning of a line
 $        Matches the end of the line
 .        Matches any character
@@ -90,4 +91,4 @@ $        Matches the end of the line
 [a-z0-9] The set of characters can include a range
 (        Indicates where string extraction is to start
 )        Indicates where string extraction is to end
-
+```
