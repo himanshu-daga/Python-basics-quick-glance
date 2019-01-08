@@ -73,6 +73,7 @@ print(sorted( [ (v,k) for k,v in counts.items() ], reverse= True ) )
 ## RegEx - Regular Expressions
 Very handy for making searches in strings and documents with specific type of pattern like we want to search all words starting with 'H' and ending with 'o' rather than finding whether 'Hello' is present or not. For this, we use wildcard characters.
 https://docs.python.org/3/howto/regex.html
+
 Python Regular Expression Quick Guide:
 ```
 ^        Matches the beginning of a line
@@ -105,4 +106,10 @@ for line in hand:
         print(line)
         
 #EX-->  ^X.*:  --> starts with X, followed by 1 or more (due to +) non-blank characters (due to \S) and then ':'        
+
+import re
+x='I like 21 and 51'
+y=re.findall('[0-9]+',x) # find all numbers-characters b/w 0 to 9 one or more times
+# now y=['21','51']  -- these are strings not integers
+
 ```
