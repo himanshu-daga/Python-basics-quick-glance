@@ -72,7 +72,7 @@ print(sorted( [ (v,k) for k,v in counts.items() ], reverse= True ) )
 ```
 ## RegEx - Regular Expressions
 Very handy for making searches in strings and documents with specific type of pattern like we want to search all words starting with 'H' and ending with 'o' rather than finding whether 'Hello' is present or not. For this, we use wildcard characters.
-
+https://docs.python.org/3/howto/regex.html
 Python Regular Expression Quick Guide:
 ```
 ^        Matches the beginning of a line
@@ -92,7 +92,7 @@ $        Matches the end of the line
 (        Indicates where string extraction is to start
 )        Indicates where string extraction is to end
 ```
-### Usage in Python:
+#### Usage in Python:
 ```python
 #re.search()- check if a string matches a regular expression
 #re.findall()- extract portions of string that matches our regular expressions
