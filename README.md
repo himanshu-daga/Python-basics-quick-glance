@@ -92,3 +92,17 @@ $        Matches the end of the line
 (        Indicates where string extraction is to start
 )        Indicates where string extraction is to end
 ```
+### Usage in Python:
+```python
+#re.search()- check if a string matches a regular expression
+#re.findall()- extract portions of string that matches our regular expressions
+
+import re
+hand=open('text.txt')
+for line in hand:
+    line=line.rstrip()
+    if re.search('^From:',line)
+        print(line)
+        
+EX-->  ^X.*:  --> starts with X, followed by 1 or more (due to +) non-blank characters (due to \S) and then ':'        
+```
