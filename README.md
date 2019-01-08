@@ -104,5 +104,5 @@ for line in hand:
     if re.search('^From:',line)
         print(line)
         
-EX-->  ^X.*:  --> starts with X, followed by 1 or more (due to +) non-blank characters (due to \S) and then ':'        
+#EX-->  ^X.*:  --> starts with X, followed by 1 or more (due to +) non-blank characters (due to \S) and then ':'        
 ```
