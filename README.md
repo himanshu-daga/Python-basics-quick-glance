@@ -113,3 +113,7 @@ y=re.findall('[0-9]+',x) # find all numbers-characters b/w 0 to 9 one or more ti
 # now y=['21','51']  -- these are strings not integers
 
 ```
+```python
+#by default, findall() does greedy matching i.e. if 2 strings match our expression then it will pick up the bigger string
+#we can select smaller one by using '?' sign
+```
