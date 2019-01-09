@@ -92,6 +92,9 @@ $        Matches the end of the line
 [a-z0-9] The set of characters can include a range
 (        Indicates where string extraction is to start
 )        Indicates where string extraction is to end
+\        Use this when you want to actually match a special character from above like + but it can't be directly used 
+         as it will be interpreted as 'Repeats a character one or more times' but \+ will simply search for + symbol 
+         as part of the pattern
 ```
 #### Usage in Python:
 ```python
@@ -113,7 +116,12 @@ y=re.findall('[0-9]+',x) # find all numbers-characters b/w 0 to 9 one or more ti
 # now y=['21','51']  -- these are strings not integers
 
 ```
-```python
-#by default, findall() does greedy matching i.e. if 2 strings match our expression then it will pick up the bigger string
-#we can select smaller one by using '?' sign
+```
+by default, findall() does greedy matching i.e. if 2 strings match our expression then it will pick up the bigger string
+we can select smaller one by using '?' sign
+
+'^From .*@([^ ]*)' --> Start with from, followed by a space, any number of characters up to '@' and 
+                    then begin extracting '(' all non-blank characters '[^ ]*' and then end extracting ')'
+
+Note: only extracted part i.e. part between paranthesis '()' will be stored in the list 
 ```
